@@ -2,12 +2,23 @@
 Template for a MongoDB/MySQL-ExpressJS-ReactJS-NodeJS (M-E-R-N) Application Stack using Docker
  (Tested on Ubuntu 16.04 x86_64)
 
+### Install dependencies
+
 * Install docker
 * Install latest docker-compose
 * Install NodeJS via NVM
+
+### Install NodeJS Modules
+* cd node-backend, npm install
+* cd react-frontend, npm install
+
+### Deploy
+
 * docker-compose build
 * docker-compose up
 
+### Test 
+Go to http://<ip adrres>:3000
 
 ## References
 *https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
