@@ -1,0 +1,39 @@
+version: '2.1'
+services:
+  mongodb:
+    image: "mongo"
+    ports:
+     - "27017:27017"
+  mysqldb:
+    image: "mysql:5.5.60"
+    environment:
+      MYSQL_DATABASE: dbname
+      MYSQL_USER: dbnuser
+      MYSQL_PASSWORD: dbpass
+      MYSQL_ROOT_PASSWORD: root
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "10.0.3.190"]
+      timeout: 20s
+      retries: 5
+    ports:
+     - "3306:3306"
+  backend:
+    build: ./node-backend/
+    ports:
+      - "6200:6200"
+    volumes:
+      - ./node-backend:/usr/src/app
+      - ./data:/usr/src/app/data
+    depends_on:
+      mysqldb:
+        condition: service_healthy
+      mongodb:
+        condition: service_started
+  frontend:
+    build: ./react-frontend/
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./react-frontend:/usr/src/app
+    depends_on:
+      - backend
