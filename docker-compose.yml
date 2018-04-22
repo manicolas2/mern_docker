@@ -12,7 +12,7 @@ services:
       MYSQL_PASSWORD: dbpass
       MYSQL_ROOT_PASSWORD: root
     healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "10.0.3.190"]
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "127.0.0.1"]
       timeout: 20s
       retries: 5
     ports:
