@@ -1,4 +1,4 @@
-# mern_docker
+# M-E-R-N on Docker
 Template for a MongoDB/MySQL-ExpressJS-ReactJS-NodeJS (M-E-R-N) Application Stack using Docker
 
 (Tested on Ubuntu 16.04 x86_64)
