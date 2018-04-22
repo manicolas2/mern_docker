@@ -55,7 +55,7 @@ Go to ```http://<dev_machine_ip_addr>:6200/todo/``` in your browser
 Go to ```http://<dev_machine_ip_addr>:6200/todo/mysql``` in your browser
 
 #### PHPMyAdmin 
-Go to ```http://<dev_machine_ip_addr>:8181``` in your browser
+Go to ```http://<dev_machine_ip_addr>:8181``` in your browser. Credentials: ```root:root```
 
 
 ## References
