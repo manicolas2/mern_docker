@@ -28,14 +28,14 @@ Template for a MongoDB/MySQL-ExpressJS-ReactJS-NodeJS (M-E-R-N) Application Stac
 ```
 ### Set the IP address
 
-Get the IP address of your dev machine, mine for example is 10.0.3.190
+Get the IP address of your dev machine
 ```
  $ ifconfig
 ```
 
 Replace all occurences of 127.0.0.1 with your dev machine's IP address obtained above
 ```
- $ grep -Rl --exclude-dir=node_modules 127.0.0.1 | xargs sed -i 's/127.0.0.1/10.0.3.190/g'
+ $ grep -Rl --exclude=README.md --exclude-dir=node_modules 127.0.0.1 | xargs sed -i 's/127.0.0.1/<dev_machine_ip_addr>/g'
 ```
 
 
@@ -45,8 +45,17 @@ Replace all occurences of 127.0.0.1 with your dev machine's IP address obtained 
  $ sudo docker-compose up
 ```
 
-### Test 
-Go to ```http://127.0.0.1:3000``` in your browser
+### Test
+#### Application 
+Go to ```http://<dev_machine_ip_addr>:3000``` in your browser
+
+#### API Endpoint 
+Go to ```http://<dev_machine_ip_addr>:6200/todo/``` in your browser
+Go to ```http://<dev_machine_ip_addr>:6200/todo/mysql``` in your browser
+
+#### PHPMyAdmin 
+Go to ```http://<dev_machine_ip_addr>:8181``` in your browser
+
 
 ## References
 *https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
