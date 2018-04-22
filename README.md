@@ -1,16 +1,22 @@
-# mern_docker
+# M-E-R-N on Docker
 Template for a MongoDB/MySQL-ExpressJS-ReactJS-NodeJS (M-E-R-N) Application Stack using Docker
- (Tested on Ubuntu 16.04 x86_64)
 
-### Install dependencies
+(Tested on Ubuntu 16.04 x86_64)
+
+### Install tools
 
 * Install docker
 * Install latest docker-compose
 * Install NodeJS via NVM
 
+### Clone the the project
+```$ git clone https://github.com/srg-ics-uplb/mern_docker.git```
+
+
 ### Install NodeJS Modules
-* cd node-backend, npm install
-* cd react-frontend, npm install
+cd node-backend, npm install
+
+cd react-frontend, npm install
 
 ### Deploy
 
