@@ -17,6 +17,16 @@ services:
       retries: 5
     ports:
      - "3306:3306"
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mysqldb
+    ports:
+      - 8181:80
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      PMA_HOST: 10.0.3.190
   backend:
     build: ./node-backend/
     ports:
