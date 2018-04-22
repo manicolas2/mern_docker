@@ -26,6 +26,18 @@ Template for a MongoDB/MySQL-ExpressJS-ReactJS-NodeJS (M-E-R-N) Application Stac
  $ npm install
  $ cd ..
 ```
+### Set the IP address
+
+Get the IP address of your dev machine, mine for example is 10.0.3.190
+```
+ $ ifconfig
+```
+
+Replace all occurences of 127.0.0.1 with your dev machine's IP address obtained above
+```
+ $ grep -Rl --exclude-dir=node_modules 127.0.0.1 | xargs sed -i 's/127.0.0.1/10.0.3.190/g'
+```
+
 
 ### Run the containers
 ```
