@@ -26,7 +26,7 @@ services:
     environment:
       MYSQL_USERNAME: root
       MYSQL_ROOT_PASSWORD: root
-      PMA_HOST: 10.0.3.190
+      PMA_HOST: 127.0.0.1
   backend:
     build: ./node-backend/
     ports:

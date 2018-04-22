@@ -12,6 +12,17 @@ var mysql_connection = mysql.createConnection({
   insecureAuth : true
 });
 
+router.route('/mysql').get(function (req, res) {
+  mysql_connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
+    if (err) throw err
+    console.log('The solution is: ', rows[0].solution);
+    retval="{'val':'";
+    retval2=retval.concat(rows[0].solution);
+    retval3=retval2.concat("'}");
+    res.json(retval3);
+  });
+});
+
 
 //Schema
 var TodoList = require('../models/TodoList');
@@ -35,16 +46,6 @@ router.route('/').get(function (req, res) {
   });
 });
 
-router.route('/mysql').get(function (req, res) {
-  mysql_connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
-    if (err) throw err
-    console.log('The solution is: ', rows[0].solution);
-    retval="{'val':'";
-    retval2=retval.concat(rows[0].solution);
-    retval3=retval2.concat("'}");
-    res.json(retval3);
-  });
-});
 
 // Add item
 router.route('/add').post(function (req, res) {
