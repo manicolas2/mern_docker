@@ -1,4 +1,4 @@
-# M-E-R-N on Docker
+# mern_docker
 Template for a MongoDB/MySQL-ExpressJS-ReactJS-NodeJS (M-E-R-N) Application Stack using Docker
 
 (Tested on Ubuntu 16.04 x86_64)
@@ -13,18 +13,25 @@ Template for a MongoDB/MySQL-ExpressJS-ReactJS-NodeJS (M-E-R-N) Application Stac
 ```$ git clone https://github.com/srg-ics-uplb/mern_docker.git```
 
 
-### Install NodeJS Modules
-cd node-backend, npm install
+### Install NodeJS modules for the backend and the frontend
+```
+ $ cd node-backend
+ $ npm install
+ $ cd ..
+ $ cd react-frontend
+ $ npm install
+ $ cd ..
 
-cd react-frontend, npm install
+```
 
 ### Deploy
-
-* docker-compose build
-* docker-compose up
+```
+ $ sudo docker-compose build
+ $ sudo docker-compose up
+```
 
 ### Test 
-Go to http://<ip adrres>:3000
+Go to ```http://127.0.0.1:3000```
 
 ## References
 *https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
