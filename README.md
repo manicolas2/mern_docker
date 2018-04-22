@@ -4,9 +4,9 @@ Template for a MongoDB/MySQL-ExpressJS-ReactJS-NodeJS (M-E-R-N) Application Stac
 (Tested on Ubuntu 16.04 x86_64)
 
 ### Install tools
-(See References section)
+(See References section below for guide)
 
-* Install docker 
+* Install docker (18.03.0-ce) 
 * Install docker-compose (v1.18.0)
 * Install NodeJS via NVM (v8.11.1)
 
@@ -27,7 +27,7 @@ Template for a MongoDB/MySQL-ExpressJS-ReactJS-NodeJS (M-E-R-N) Application Stac
  $ cd ..
 ```
 
-### Deploy
+### Run the containers
 ```
  $ sudo docker-compose build
  $ sudo docker-compose up
