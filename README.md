@@ -51,6 +51,7 @@ Go to ```http://<dev_machine_ip_addr>:3000``` in your browser
 
 #### API Endpoint 
 Go to ```http://<dev_machine_ip_addr>:6200/todo/``` in your browser
+
 Go to ```http://<dev_machine_ip_addr>:6200/todo/mysql``` in your browser
 
 #### PHPMyAdmin 
