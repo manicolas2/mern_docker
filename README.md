@@ -7,7 +7,7 @@ Template for a MongoDB/MySQL-ExpressJS-ReactJS-NodeJS (M-E-R-N) Application Stac
 (See References section)
 
 * Install docker 
-* Install latest docker-compose (v1.18.0)
+* Install docker-compose (v1.18.0)
 * Install NodeJS via NVM (v8.11.1)
 
 ### Clone this repository
