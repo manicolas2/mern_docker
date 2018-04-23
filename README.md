@@ -65,8 +65,7 @@ These are set in ```docker-compose.yml```. For example for mysqlb:
      - "17001:3306"
 ``` 
 
-
-| Lab Section    | MySQL      | MongoDB  | API Endpoint | Application | PHPMyAdmin | 
+| Lab Section    | mysqldb    | mongodb  | backend      | frontend    | phpmyadmin | 
 | -------------  |------------| -------  | ------------ | ----------- | ---------- |
 | 1L             | 17001      | 13201    | 12501        | 12801       | 2201       |
 | 2L             | 17002      | 13202    | 12502        | 12802       | 2202       |
@@ -78,11 +77,6 @@ These are set in ```docker-compose.yml```. For example for mysqlb:
 | 8L             | 17008      | 13208    | 12508        | 12808       | 2208       |
 | 9L             | 17009      | 13209    | 12509        | 12809       | 2209       |
 | 10L            | 17010      | 13210    | 12510        | 12810       | 2210       |
-
-
-
-
-
 
 ## References
 *https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
