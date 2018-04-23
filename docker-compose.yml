@@ -3,7 +3,7 @@ services:
   mongodb:
     image: "mongo"
     ports:
-     - "27017:27017"
+     - "13266:27017"
   mysqldb:
     image: "mysql:5.5.60"
     environment:
@@ -12,25 +12,28 @@ services:
       MYSQL_PASSWORD: dbpass
       MYSQL_ROOT_PASSWORD: root
     healthcheck:
-      test: ["CMD", "mysqladmin" ,"ping", "-h", "127.0.0.1"]
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "10.0.3.93"]
       timeout: 20s
       retries: 5
     ports:
-     - "3306:3306"
+     - "17066:3306"
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     links:
       - mysqldb
     ports:
-      - 8181:80
+      - "2266:80"
     environment:
       MYSQL_USERNAME: root
       MYSQL_ROOT_PASSWORD: root
-      PMA_HOST: 127.0.0.1
+      PMA_HOST: 10.0.3.93
+    depends_on:
+      mysqldb:
+        condition: service_healthy
   backend:
     build: ./node-backend/
     ports:
-      - "6200:6200"
+      - "12566:6200"
     volumes:
       - ./node-backend:/usr/src/app
       - ./data:/usr/src/app/data
@@ -42,7 +45,7 @@ services:
   frontend:
     build: ./react-frontend/
     ports:
-      - "3000:3000"
+      - "12866:3000"
     volumes:
       - ./react-frontend:/usr/src/app
     depends_on:

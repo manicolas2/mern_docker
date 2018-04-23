@@ -57,7 +57,14 @@ Go to ```http://<dev_machine_ip_addr>:6200/todo/mysql``` in your browser
 #### PHPMyAdmin 
 Go to ```http://<dev_machine_ip_addr>:8181``` in your browser. Credentials: ```root:root```
 
-### Port numbering (for CMSC 128 Projects)
+### Port numbering and mapping (for CMSC 128 Projects)
+These are set in ```docker-compose.yml```. For example for mysqlb:
+
+```
+    ports:
+     - "17001:3306"
+``` 
+
 
 | Lab Section    | MySQL      | MongoDB  | API Endpoint | Application | PHPMyAdmin | 
 | -------------  |------------| -------  | ------------ | ----------- | ---------- |
