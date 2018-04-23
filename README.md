@@ -57,6 +57,25 @@ Go to ```http://<dev_machine_ip_addr>:6200/todo/mysql``` in your browser
 #### PHPMyAdmin 
 Go to ```http://<dev_machine_ip_addr>:8181``` in your browser. Credentials: ```root:root```
 
+### Port numbering (for CMSC 128 Projects)
+
+| Lab Section    | MySQL        | MongoDB  | API Endpoint | Application | 
+| -------------  |--------------| -------  | ------------ | ----------- |
+| 1L             | 17001        | 13201    | 12501        | 12801       |
+| 2L             | 17002        | 13202    | 12502        | 12802       |
+| 3L             | 17003        | 13203    | 12503        | 12803       |
+| 4L             | 17004        | 13204    | 12504        | 12804       |
+| 5L             | 17005        | 13205    | 12505        | 12805       |
+| 6L             | 17006        | 13206    | 12506        | 12806       |
+| 7L             | 17007        | 13207    | 12507        | 12807       |
+| 8L             | 17008        | 13208    | 12508        | 12808       |
+| 9L             | 17009        | 13209    | 12509        | 12809       |
+| 10L            | 17010        | 13210    | 12510        | 12810       |
+
+
+
+
+
 
 ## References
 *https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
