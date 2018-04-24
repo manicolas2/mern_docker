@@ -1,9 +1,13 @@
 import axios from 'axios';
 
+var apiendpoint='http://127.0.0.1:6200/todo/';
+
 export default class TodoService {
 
+
   all(callback) {
-    axios.get('http://10.0.3.93:6200/todo')
+    console.log(apiendpoint);
+    axios.get(apiendpoint)
     .then((response) => {
       callback(response.data);
     })
@@ -14,7 +18,7 @@ export default class TodoService {
   }
 
   get(id,callback) {
-    axios.get('http://10.0.3.93:6200/todo/'+id)
+    axios.get(apiendpoint+id)
     .then((response) => {
       callback(response.data);
     })
@@ -25,7 +29,7 @@ export default class TodoService {
   }
 
   add(data,callback) {
-    axios.post('http://10.0.3.93:6200/todo/add/', {
+    axios.post(apiendpoint+'/add/', {
     desc: data
     })
     .then(function (response) {
@@ -39,7 +43,7 @@ export default class TodoService {
   }
 
   update(data, id, callback){
-    axios.post('http://10.0.3.93:6200/todo/update/'+id, {
+    axios.post(apiendpoint+'/update/'+id, {
       desc: data
     })
     .then(function(response) {
@@ -52,7 +56,7 @@ export default class TodoService {
   }
 
   delete(id, callback){
-    axios.get('http://10.0.3.93:6200/todo/delete/'+id)
+    axios.get(apiendpoint+'/delete/'+id)
     .then(function(response){
       callback();
     })
