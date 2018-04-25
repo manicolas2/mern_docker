@@ -15,7 +15,6 @@ Template for a MongoDB/MySQL-ExpressJS-ReactJS-NodeJS (M-E-R-N) Application Stac
  $ git clone https://github.com/srg-ics-uplb/mern_docker.git
 ```
 
-
 ### Install NodeJS modules for the backend and the frontend
 ```
  $ cd mern_docker 
@@ -37,6 +36,13 @@ Replace all occurences of 127.0.0.1 with your dev machine's IP address obtained 
 ```
  $ grep -Rl --exclude=README.md --exclude-dir=node_modules 127.0.0.1 | xargs sed -i 's/127.0.0.1/<dev_machine_ip_addr>/g'
 ```
+
+### Stop all MySQL and MongoDB running services
+```
+ $ sudo service mysql stop
+ $ sudo service mongod stop
+```
+
 
 
 ### Run the containers
