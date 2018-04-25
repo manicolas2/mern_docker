@@ -38,6 +38,7 @@ Replace all occurences of 127.0.0.1 with your dev machine's IP address obtained 
 ```
 
 ### Stop all MySQL and MongoDB running services
+You might have local installs of these services. 
 ```
  $ sudo service mysql stop
  $ sudo service mongod stop
